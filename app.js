@@ -37,7 +37,7 @@ function render() {
   const q = $('q').value.toLowerCase();
   const list = products.filter(p => (p.name + ' ' + (p.category || '')).toLowerCase().includes(q));
   $('grid').innerHTML = list.map(p => `<div class="card"><div class="img">${imgHtml(p)}</div><div class="b"><div>${esc(p.name)}</div>
-    <div class="mu">${esc(p.category)}</div><div class="mu">${esc(p.description)}</div><b>${p.price} ₽</b>
+    <div class="mu">${esc(p.category)}</div><div class="mu">${esc(p.description)}</div><b>${p.price} сомонӣ</b>
     <button data-add="${p.id}" ${p.stock <= 0 ? 'disabled' : ''}>${p.stock <= 0 ? 'Нет в наличии' : 'В корзину'}</button></div></div>`).join('') || '<p class="mu">Товаров пока нет</p>';
   $('cnt').textContent = Object.values(cart).reduce((a, b) => a + b, 0);
   let t = 0;
