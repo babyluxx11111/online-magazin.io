@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Мой магазин</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>🛍️ Мой магазин</h1><button class="g" id="bAdmin">⚙️ Админка</button><button id="bCart">🛒 <span id="cnt">0</span></button></header>
+<main>
+<section id="shop"><input id="q" placeholder="Поиск…"><div class="grid" id="grid"></div></section>
+<section id="cart" class="hide"><div class="panel"><h3>Корзина</h3><div id="cartList"></div><p><b>Итого: <span id="tot">0</span> ₽</b></p>
+<button id="bOrder">Оформить заказ</button> <button class="g" id="bBack1">← В магазин</button></div></section>
+<section id="admin" class="hide">
+<div id="login" class="panel"><label>Пароль администратора</label><input id="pw" type="password"><br><br><button id="bLogin">Войти</button> <button class="g" id="bBack2">← В магазин</button></div>
+<div id="app" class="hide">
+<div class="panel"><h3 id="fTitle">Добавить товар</h3>
+<div class="row"><div><label>Название</label><input id="fn"></div><div><label>Цена, ₽</label><input id="fp" type="number" min="0"></div></div>
+<div class="row"><div><label>Категория</label><input id="fc"></div><div><label>Остаток</label><input id="fs" type="number" min="0" value="10"></div></div>
+<div class="row"><div><label>Эмодзи</label><input id="fe" value="📦"></div><div><label>Фото</label><input id="ff" type="file" accept="image/*"></div></div>
+<label>Описание</label><textarea id="fd" rows="2"></textarea><br><br>
+<button id="bSave">Сохранить</button> <button class="g" id="bReset">Очистить</button></div>
+<div class="panel"><h3>Товары</h3><div id="list"></div></div>
+<div class="panel"><h3>Резервная копия</h3><p class="mu">Данные хранятся в этом браузере. Сохраните копию, чтобы перенести их на другой компьютер.</p>
+<button class="g" id="bExp">⬇ Экспорт</button> <label class="mu" style="display:inline">Импорт: <input id="fi" type="file" accept=".json" style="width:auto"></label>
+<br><br><button class="g" id="bLogout">Выйти</button> <button class="g" id="bBack3">← В магазин</button></div>
+</div></section></main>
+<script src="app.js"></script></body></html>
